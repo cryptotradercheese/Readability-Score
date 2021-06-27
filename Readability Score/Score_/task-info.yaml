@@ -1,17 +1,6 @@
 type: edu
 custom_name: Score!
 files:
-- name: src/readability/Main.java
-  visible: true
-  text: |
-    package readability;
-
-    public class Main {
-        public static void main(String[] args) {
-            System.out.print("Hello world!");
-        }
-    }
-  learner_created: false
 - name: test/ReadabilityTest.java
   visible: false
   text: |
@@ -211,6 +200,15 @@ files:
         }
     }
   learner_created: false
+- name: src/readability/TextAnalyzer.java
+  visible: true
+  learner_created: true
+- name: src/readability/text.txt
+  visible: true
+  learner_created: true
+- name: src/readability/TextAnalyzer.class
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/39/stages/207/implement#comment
 status: Unchecked
 record: -1

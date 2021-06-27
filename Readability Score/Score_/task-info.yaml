@@ -200,15 +200,15 @@ files:
         }
     }
   learner_created: false
-- name: src/readability/TextAnalyzer.java
-  visible: true
-  learner_created: true
 - name: src/readability/text.txt
   visible: true
   learner_created: true
-- name: src/readability/TextAnalyzer.class
+- name: src/readability/TextAnalyzer.java
   visible: true
   learner_created: true
 feedback_link: https://hyperskill.org/projects/39/stages/207/implement#comment
-status: Unchecked
-record: -1
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sun, 27 Jun 2021 11:49:37 UTC
+record: 3

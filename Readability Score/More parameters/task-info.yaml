@@ -1,17 +1,6 @@
 type: edu
 custom_name: stage4
 files:
-- name: src/readability/Main.java
-  visible: true
-  text: |
-    package readability;
-
-    public class Main {
-        public static void main(String[] args) {
-            System.out.print("Hello world!");
-        }
-    }
-  learner_created: false
 - name: test/ReadabilityTest.java
   visible: false
   text: |
@@ -425,6 +414,24 @@ files:
         }
     }
   learner_created: false
+- name: src/readability/text.txt
+  visible: true
+  text: |
+    Readability is the ease with which a reader can understand a written text. In natural language, the readability of text depends on its content and its presentation. Researchers have used various factors to measure readability. Readability is more than simply legibility, which is a measure of how easily a reader can distinguish individual letters or characters from each other. Higher readability eases reading effort and speed for any reader, but it is especially important for those who do not have high reading comprehension. In readers with poor reading comprehension, raising the readability level of a text from mediocre to good can make the difference between success and failure
+  learner_created: true
+- name: src/readability/TextParser.java
+  visible: true
+  learner_created: true
+- name: src/readability/ReadabilityCalculationAlgorithm.java
+  visible: true
+  learner_created: true
+- name: src/readability/AgeAnalyzer.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/39/stages/208/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Well done! You finished the project. Select a new project on <a href="https://hyperskill.org/projects">JetBrains
+    Academy</a> to continue learning.
+  time: Sun, 27 Jun 2021 21:25:46 UTC
 record: -1

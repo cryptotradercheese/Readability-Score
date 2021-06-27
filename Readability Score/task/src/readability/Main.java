@@ -9,8 +9,6 @@ import java.io.FileReader;
 
 public class Main {
     public static void main(String[] args) {
-        final Scanner scanner = new Scanner(System.in);
-
         File file = new File(args[0]);
         char[] text = new char[(int) file.length()];
         try (FileReader reader = new FileReader(file)) {
@@ -18,59 +16,67 @@ public class Main {
         } catch (IOException e) {
             System.out.println(e);
         }
-        TextAnalyzer analyzer = new TextAnalyzer(text.toString());
 
-        double score = analyzer.getScore();
-        String age = "";
-        switch ((int) Math.round(score)) {
-            case 1:
-                age = "5-6";
-                break;
-            case 2:
-                age = "6-7";
-                break;
-            case 3:
-                age = "7-9";
-                break;
-            case 4:
-                age = "9-10";
-                break;
-            case 5:
-                age = "10-11";
-                break;
-            case 6:
-                age = "11-12";
-                break;
-            case 7:
-                age = "12-13";
-                break;
-            case 8:
-                age = "13-14";
-                break;
-            case 9:
-                age = "14-15";
-                break;
-            case 10:
-                age = "15-16";
-                break;
-            case 11:
-                age = "16-17";
-                break;
-            case 12:
-                age = "17-18";
-                break;
-            case 13:
-                age = "18-24";
-                break;
-            case 14:
-                age = "24+";
-                break;
+        final Scanner scanner = new Scanner(System.in);
+        TextParser parser = new TextParser(String.valueOf(text));
+        ReadabilityAnalyzer analyzer = new ReadabilityAnalyzer();
+
+        System.out.println("Words: " + parser.countWords());
+        System.out.println("Sentences: " + parser.countSentences());
+        System.out.println("Characters: " + parser.countCharacters());
+        System.out.println("Syllables: " + parser.countSyllables());
+        System.out.println("Polysyllables: " + parser.countPolysyllables());
+        System.out.print("Enter the score you want to calculate (ARI, FK, SMOG, CL, all): ");
+
+        int generalAge = 0;
+        int algorithmsUsed = 0;
+        String algorithm = scanner.next();
+        System.out.println();
+
+        String[] params;
+        if ("all".equals(algorithm)) {
+            params = new String[] {"ARI", "FK", "SMOG", "CL"};
+        } else {
+            params = new String[] {"algorithm"};
         }
 
-        System.out.println("Words: " + analyzer.countWords());
-        System.out.println("Sentences: " + analyzer.countSentences());
-        System.out.println("Characters: " + analyzer.countCharacters());
-        System.out.println("The score is: " + Math.round(analyzer.getScore() * 100) / 100.0);
-        System.out.printf("This text should be understood by %s-year-olds.", age);
+        for (String param : params) {
+            String name = "";
+            switch (param) {
+                case "ARI":
+                    name = "Automated Readability Index";
+                    analyzer.setAlgorithm(new AutomatedReadabilityAlgorithm());
+                    break;
+                case "FK":
+                    name = "Flesch–Kincaid readability tests";
+                    analyzer.setAlgorithm(new FleschKincaidAlgorithm());
+                    break;
+                case "SMOG":
+                    name = "Simple Measure of Gobbledygook";
+                    analyzer.setAlgorithm(new SMOGAlgorithm());
+                    break;
+                case "CL":
+                    name = "Coleman–Liau index";
+                    analyzer.setAlgorithm(new ColemanLiauAlgorithm());
+                    break;
+            }
+
+            double score = analyzer.getScore(String.valueOf(text));
+            int age = AgeAnalyzer.getAge(score);
+            generalAge += age;
+            algorithmsUsed++;
+            System.out.printf(
+                    "%s: %.2f (about %d-year-olds).",
+                    name,
+                    score,
+                    age
+            );
+            System.out.println();
+        }
+
+
+        double averageAge = (double) generalAge / algorithmsUsed;
+        System.out.println();
+        System.out.printf("This text should be understood in average by %.2f-year-olds.", averageAge);
     }
 }

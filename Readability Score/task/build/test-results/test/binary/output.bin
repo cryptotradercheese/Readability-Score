@@ -1,24 +1,42 @@
 [1;31m
 Start test 1[0m
-R> This text is simple to read! It has on average less than 10 words per sentence.
-EASY
+Words: 108
+Sentences: 6
+Characters: 580
+Syllables: 197
+Polysyllables: 21
+FEnter the score you want to calculate (ARI, FK, SMOG, CL, all): > all
+
+9Automated Readability Index: 12.86 (about 24-year-olds).
+@Flesch–Kincaid readability tests: 12.95 (about 24-year-olds).
+<Simple Measure of Gobbledygook: 13.82 (about 24-year-olds).
+2Coleman–Liau index: 14.13 (about 24-year-olds).
+
 [1;31m
 Start test 2[0m
-g> This text is hard to read. It contains a lot of sentences as well as a lot of words in each sentence
-HARD
+Words: 137
+Sentences: 14
+Characters: 687
+Syllables: 214
+Polysyllables: 17
+FEnter the score you want to calculate (ARI, FK, SMOG, CL, all): > all
+
+8Automated Readability Index: 7.08 (about 13-year-olds).
+?Flesch–Kincaid readability tests: 6.66 (about 13-year-olds).
+;Simple Measure of Gobbledygook: 9.39 (about 15-year-olds).
+2Coleman–Liau index: 10.66 (about 17-year-olds).
+
 [1;31m
 Start test 3[0m
-�> 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1. 1. 1.
-HARD
-[1;31m
-Start test 4[0m
-z> 12, 12 13 14 14 14, 12 21 23 89! 75 12, 134 241 123, 123 123 123, 123 123 123? 123, 123 123 123 23 123 213 123 123 123.
-HARD
-[1;31m
-Start test 5[0m
-v> 12, 12 13 14 14 14, 12 21 23 89! 75 12, 241 123, 123 123 123, 123 123 123? 123, 123 123 123 23 123 213 123 123 123.
-EASY
-[1;31m
-Start test 6[0m
-�> Readability is the ease with which a reader can understand a written text. In natural language, the readability of text depends on its content and its presentation. Researchers have used various factors to measure readability. And that is it!
-EASY
+Words: 180
+Sentences: 13
+Characters: 982
+Syllables: 318
+Polysyllables: 34
+FEnter the score you want to calculate (ARI, FK, SMOG, CL, all): > all
+
+9Automated Readability Index: 11.19 (about 17-year-olds).
+@Flesch–Kincaid readability tests: 10.66 (about 17-year-olds).
+<Simple Measure of Gobbledygook: 12.34 (about 18-year-olds).
+2Coleman–Liau index: 14.14 (about 24-year-olds).
+

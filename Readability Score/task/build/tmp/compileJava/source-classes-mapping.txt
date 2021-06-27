@@ -1,2 +1,13 @@
+readability/ReadabilityCalculationAlgorithm.java
+ readability.AutomatedReadabilityAlgorithm
+ readability.ColemanLiauAlgorithm
+ readability.FleschKincaidAlgorithm
+ readability.ReadabilityAnalyzer
+ readability.ReadabilityCalculationAlgorithm
+ readability.SMOGAlgorithm
+readability/TextParser.java
+ readability.TextParser
+readability/AgeAnalyzer.java
+ readability.AgeAnalyzer
 readability/Main.java
  readability.Main
